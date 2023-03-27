@@ -12,24 +12,25 @@
           :class="stopwatch.running && 'activeImg'"
           :src="
             stopwatch.running
-              ? 'https://cdn-user-icons.flaticon.com/97461/97461665/1679756096316.svg?token=exp=1679756997~hmac=65f27577adb8060c3934f27ccfacb0a8'
-              : 'https://cdn-user-icons.flaticon.com/97461/97461665/1679755877460.svg?token=exp=1679756956~hmac=cfa116780625e809294fe3d76384e0a1'
+              ? './stopWatch.svg'
+              : './runningWatch.svg'
           "
           @click="joinBtn(stopwatch)"
         />
       </div>
       <div class="btns">
         <img
-          :class="stopwatch.running ? 'activeImg' : ''"
-          src="https://cdn-user-icons.flaticon.com/97461/97461665/1679755968422.svg?token=exp=1679756956~hmac=d539a4d5ca5a285dd3be1e2e69ff61d1"
+          :class="stopwatch.running && 'activeImg'"
+          src="./resetWatch.svg"
           @click="resetStopwatch(stopwatch)"
+          alt="reset"
         />
       </div>
     </div>
   </div>
   <div class="add" @click="addStopwatch">
     <img
-      src="https://cdn-user-icons.flaticon.com/97461/97461665/1679756879248.svg?token=exp=1679757780~hmac=f4f658b42c1782dac706700dba6101b0"
+    src="./addWatch.svg"
       alt="add"
     />
   </div>
@@ -40,7 +41,7 @@ export default {
   data() {
     return {
       stopwatches: [],
-    };
+    }; 
   },
   methods: {
     addStopwatch() {
